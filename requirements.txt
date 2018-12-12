@@ -1,5 +1,0 @@
-pandas
-scipy
-trackpy
-h5py
-numpy
