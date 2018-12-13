@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pynta.model.experiment package &mdash; PyNTA 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pynta.model.experiment.nano_cet package" href="pynta.model.experiment.nano_cet.html" />
+    <link rel="prev" title="pynta.model.daqs package" href="pynta.model.daqs.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PyNTA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example_config.html">The Config File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute_codebase.html">How to Contribute Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../making_virtual_environment.html">Setting up a Python Virtual Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Information for Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../list_todo.html">List of Todo’s</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyNTA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Information for Developers</a> &raquo;</li>
+        
+          <li><a href="pynta.html">pynta package</a> &raquo;</li>
+        
+          <li><a href="pynta.model.html">pynta.model package</a> &raquo;</li>
+        
+      <li>pynta.model.experiment package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/developers/pynta.model.experiment.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pynta-model-experiment-package">
+<h1>pynta.model.experiment package<a class="headerlink" href="#pynta-model-experiment-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pynta.model.experiment.nano_cet.html">pynta.model.experiment.nano_cet package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#module-pynta.model.experiment.nano_cet.decorators">pynta.model.experiment.nano_cet.decorators module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#nano-cet-decorators">Nano CET decorators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#module-pynta.model.experiment.nano_cet.exceptions">pynta.model.experiment.nano_cet.exceptions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#nano-cet-exceptions">Nano CET exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#module-pynta.model.experiment.nano_cet.localization">pynta.model.experiment.nano_cet.localization module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#localization-routines">Localization Routines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#pynta-model-experiment-nano-cet-nano-cet-module">pynta.model.experiment.nano_cet.nano_cet module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#module-pynta.model.experiment.nano_cet.saver">pynta.model.experiment.nano_cet.saver module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#pynta-model-experiment-workersaver">pynta.model.experiment.workerSaver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#module-pynta.model.experiment.nano_cet.waterfall_worker">pynta.model.experiment.nano_cet.waterfall_worker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#module-pynta.model.experiment.nano_cet.win_nanocet">pynta.model.experiment.nano_cet.win_nanocet module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#nano-cet-py">nano_cet.py</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pynta.model.experiment.nano_cet.html#module-pynta.model.experiment.nano_cet">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pynta.model.experiment.base_experiment">
+<span id="pynta-model-experiment-base-experiment-module"></span><h2>pynta.model.experiment.base_experiment module<a class="headerlink" href="#module-pynta.model.experiment.base_experiment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-experiment-py">
+<h3>base_experiment.py<a class="headerlink" href="#base-experiment-py" title="Permalink to this headline">¶</a></h3>
+<p>Base class for the experiments. <code class="docutils literal notranslate"><span class="pre">BaseExperiment</span></code> defines the common patterns that every experiment should have.
+Importantly, it starts an independent process called publisher, that will be responsible for broadcasting messages
+that are appended to a queue. The messages rely on the pyZMQ library and should be tested further in order to
+assess their limitations. The general pattern is that of the PUB/SUB, with one publisher and several subscribers.</p>
+<p>The messages should include a <em>topic</em> and data. For this, the elements in the queue should be dictionaries with two
+keywords: <strong>data</strong> and <strong>topic</strong>. <code class="docutils literal notranslate"><span class="pre">data['data']</span></code> will be serialized through the use of cPickle, and is handled
+automatically by pyZQM through the use of <code class="docutils literal notranslate"><span class="pre">send_pyobj</span></code>. The subscribers should be aware of this and use either
+unpickle or <code class="docutils literal notranslate"><span class="pre">recv_pyobj</span></code>.</p>
+<p>In order to stop the publisher process, the string <code class="docutils literal notranslate"><span class="pre">'stop'</span></code> should be placed in <code class="docutils literal notranslate"><span class="pre">data['data']</span></code>. The message
+will be broadcast and can be used to stop other processes, such as subscribers.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Check whether the serialization of objects with cPickle may be a bottleneck for performance.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">Aquiles Carattino &lt;<a class="reference external" href="mailto:aquiles&#37;&#52;&#48;aquicarattino&#46;com">aquiles<span>&#64;</span>aquicarattino<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">GPLv3, see LICENSE for more details</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment">
+<em class="property">class </em><code class="descclassname">pynta.model.experiment.base_experiment.</code><code class="descname">BaseExperiment</code><a class="reference internal" href="../_modules/pynta/model/experiment/base_experiment.html#BaseExperiment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Base class to define experiments. Should keep track of the basic methods needed regardless of the experiment
+to be performed. For instance, a way to start and a way to finalize a measurement.</p>
+<dl class="attribute">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.alive_threads">
+<code class="descname">alive_threads</code><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.alive_threads" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.clear_threads">
+<code class="descname">clear_threads</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/base_experiment.html#BaseExperiment.clear_threads"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.clear_threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep only the threads that are alive.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.connect">
+<code class="descname">connect</code><span class="sig-paren">(</span><em>method</em>, <em>topic</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/base_experiment.html#BaseExperiment.connect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Async method that connects the running publisher to the given method on a specific topic.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>method</strong> – method that will be connected on a given topic</li>
+<li><strong>topic</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – the topic that will be used by the subscriber to discriminate what information to collect.</li>
+<li><strong>args</strong> – extra arguments will be passed to the subscriber, which in turn will pass them to the function</li>
+<li><strong>kwargs</strong> – extra keyword arguments will be passed to the subscriber, which in turn will pass them to the function</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.connections">
+<code class="descname">connections</code><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.connections" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.finalize">
+<code class="descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/base_experiment.html#BaseExperiment.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Needs to be overridden by child classes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.list_alive_threads">
+<code class="descname">list_alive_threads</code><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.list_alive_threads" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.load_configuration">
+<code class="descname">load_configuration</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/base_experiment.html#BaseExperiment.load_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.load_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the configuration file in YAML format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – full path to where the configuration file is located.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#FileNotFoundError" title="(in Python v3.7)"><strong>FileNotFoundError</strong></a> – if the file does not exist.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.num_threads">
+<code class="descname">num_threads</code><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.num_threads" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.set_up">
+<code class="descname">set_up</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/base_experiment.html#BaseExperiment.set_up"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.set_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Needs to be overridden by child classes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.stop_publisher">
+<code class="descname">stop_publisher</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/base_experiment.html#BaseExperiment.stop_publisher"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.stop_publisher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Puts the proper data to the queue in order to stop the running publisher process</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.stop_subscribers">
+<code class="descname">stop_subscribers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/base_experiment.html#BaseExperiment.stop_subscribers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.stop_subscribers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Puts the proper data into every alive subscriber in order to stop it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.base_experiment.BaseExperiment.update_config">
+<code class="descname">update_config</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/base_experiment.html#BaseExperiment.update_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.base_experiment.BaseExperiment.update_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-pynta.model.experiment.publisher">
+<span id="pynta-model-experiment-publisher-module"></span><h2>pynta.model.experiment.publisher module<a class="headerlink" href="#module-pynta.model.experiment.publisher" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="publisher">
+<h3>Publisher<a class="headerlink" href="#publisher" title="Permalink to this headline">¶</a></h3>
+<p>Publishers are responsible for broadcasting the message over the ZMQ PUB/SUB architecture. The publisher runs
+continuously on a separated process and grabs elements from a queue, which in turn are sent through a socket to any
+other processes listening.</p>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">In the current implementation, data is serialized for being added to a Queue, then deserialized by the
+publisher and serialized again to be sent. These three steps could be simplify into one if, for example, one assumes
+that objects where pickled. There is also a possibility of assuming numpy arrays and using a zero-copy strategy.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">Aquiles Carattino &lt;<a class="reference external" href="mailto:aquiles&#37;&#52;&#48;aquicarattino&#46;com">aquiles<span>&#64;</span>aquicarattino<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">GPLv3, see LICENSE for more details</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pynta.model.experiment.publisher.Publisher">
+<em class="property">class </em><code class="descclassname">pynta.model.experiment.publisher.</code><code class="descname">Publisher</code><span class="sig-paren">(</span><em>port=5555</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/publisher.html#Publisher"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.publisher.Publisher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Publisher class in which the queue for publishing messages is defined and also a separated process is started.
+It is important to have a new process, since the serialization/deserialization of messages from the QUEUE may be
+a bottleneck for performance.</p>
+<dl class="method">
+<dt id="pynta.model.experiment.publisher.Publisher.empty_queue">
+<code class="descname">empty_queue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/publisher.html#Publisher.empty_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.publisher.Publisher.empty_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the publisher stops before broadcasting all the messages, the Queue may still be using some memory. This
+method is simply getting all the elements in order to free memory. Can be useful for garbage collection or
+better control of the downstream program.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.publisher.Publisher.join">
+<code class="descname">join</code><span class="sig-paren">(</span><em>timeout=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/publisher.html#Publisher.join"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.publisher.Publisher.join" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.experiment.publisher.Publisher.port">
+<code class="descname">port</code><a class="headerlink" href="#pynta.model.experiment.publisher.Publisher.port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.publisher.Publisher.publish">
+<code class="descname">publish</code><span class="sig-paren">(</span><em>topic</em>, <em>data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/publisher.html#Publisher.publish"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.publisher.Publisher.publish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adapts the data to make it faster to broadcast</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>topic</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Topic in which to publish the data</li>
+<li><strong>data</strong> – Data to be published</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.publisher.Publisher.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/publisher.html#Publisher.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.publisher.Publisher.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start a new process that will be responsible for broadcasting the messages.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.experiment.publisher.Publisher.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/publisher.html#Publisher.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.publisher.Publisher.stop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pynta.model.experiment.publisher.publisher">
+<code class="descclassname">pynta.model.experiment.publisher.</code><code class="descname">publisher</code><span class="sig-paren">(</span><em>queue</em>, <em>event</em>, <em>port</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/publisher.html#publisher"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.publisher.publisher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple method that starts a publisher on the port 5555.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>queue</strong> (<a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue" title="(in Python v3.7)"><em>multiprocessing.Queue</em></a>) – Queue of messages to be broadcasted</li>
+<li><strong>event</strong> (<a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Event" title="(in Python v3.7)"><em>multiprocessing.Event</em></a>) – Event to stop the publisher</li>
+<li><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – port in which to broadcast data</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">The publisher’s port should be determined in a configuration file.</p>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.1.0.</span></p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-pynta.model.experiment.subscriber">
+<span id="pynta-model-experiment-subscriber-module"></span><h2>pynta.model.experiment.subscriber module<a class="headerlink" href="#module-pynta.model.experiment.subscriber" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="subscriber-py">
+<h3>subscriber.py<a class="headerlink" href="#subscriber-py" title="Permalink to this headline">¶</a></h3>
+<p>Example script on how to run separate processes to process the data coming from a publisher like the one on
+<code class="docutils literal notranslate"><span class="pre">publisher.py</span></code>. The first process just grabs the frame and puts it in a Queue. The Queue is then used by
+another process in order to analyse, process, save, etc. It has to be noted that on UNIX systems, getting
+from a queue with <code class="docutils literal notranslate"><span class="pre">Queue.get()</span></code> is particularly slow, much slower than serializing a numpy array with
+cPickle.</p>
+<dl class="function">
+<dt id="pynta.model.experiment.subscriber.subscribe">
+<code class="descclassname">pynta.model.experiment.subscriber.</code><code class="descname">subscribe</code><span class="sig-paren">(</span><em>port</em>, <em>topic</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/subscriber.html#subscribe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.subscriber.subscribe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pynta.model.experiment.subscriber.subscriber">
+<code class="descclassname">pynta.model.experiment.subscriber.</code><code class="descname">subscriber</code><span class="sig-paren">(</span><em>func</em>, <em>topic</em>, <em>event</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/experiment/subscriber.html#subscriber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.experiment.subscriber.subscriber" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-pynta.model.experiment">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pynta.model.experiment" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pynta.model.experiment.nano_cet.html" class="btn btn-neutral float-right" title="pynta.model.experiment.nano_cet package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pynta.model.daqs.html" class="btn btn-neutral" title="pynta.model.daqs package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Aquiles Carattino
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

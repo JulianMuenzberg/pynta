@@ -1,0 +1,967 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pynta.model.cameras package &mdash; PyNTA 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pynta.model.daqs package" href="pynta.model.daqs.html" />
+    <link rel="prev" title="pynta.model package" href="pynta.model.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PyNTA
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example_config.html">The Config File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute_codebase.html">How to Contribute Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../making_virtual_environment.html">Setting up a Python Virtual Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Information for Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../list_todo.html">List of Todo’s</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyNTA</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Information for Developers</a> &raquo;</li>
+        
+          <li><a href="pynta.html">pynta package</a> &raquo;</li>
+        
+          <li><a href="pynta.model.html">pynta.model package</a> &raquo;</li>
+        
+      <li>pynta.model.cameras package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/developers/pynta.model.cameras.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pynta-model-cameras-package">
+<h1>pynta.model.cameras package<a class="headerlink" href="#pynta-model-cameras-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pynta.model.cameras.dummy_camera">
+<span id="pynta-model-cameras-dummy-camera-module"></span><h2>pynta.model.cameras.dummy_camera module<a class="headerlink" href="#module-pynta.model.cameras.dummy_camera" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dummycamera-py">
+<h3>dummyCamera.py<a class="headerlink" href="#dummycamera-py" title="Permalink to this headline">¶</a></h3>
+<p>Dummy camera class for testing GUI and other functionality. This specific version generates randomly diffusing
+particles. However, the settings are controlled in a different class, SimBrownian.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">The camera defines plenty of parameters that are not used or that they are confusing later on. Rasing</p>
+</div>
+<p>exceptions does not happen even if trying to extend beyond the maximum dimensions of the CCD.</p>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">The parameters for the simulation of the brownian motion should be made explicitly here, in such a way</p>
+</div>
+<p>that can be used from within the config file as well.</p>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">Some of the methods do not return the same datatype as the real models</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">Aquiles Carattino &lt;<a class="reference external" href="mailto:aquiles&#37;&#52;&#48;aquicarattino&#46;com">aquiles<span>&#64;</span>aquicarattino<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">GPLv3, see LICENSE for more details</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pynta.model.cameras.dummy_camera.camera">
+<em class="property">class </em><code class="descclassname">pynta.model.cameras.dummy_camera.</code><code class="descname">camera</code><span class="sig-paren">(</span><em>camera</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pynta.model.cameras.skeleton.cameraBase" title="pynta.model.cameras.skeleton.cameraBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pynta.model.cameras.skeleton.cameraBase</span></code></a></p>
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.GetCCDHeight">
+<code class="descname">GetCCDHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.GetCCDHeight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.GetCCDHeight" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The CCD height in pixels</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.GetCCDWidth">
+<code class="descname">GetCCDWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.GetCCDWidth"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.GetCCDWidth" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The CCD width in pixels</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.cameras.dummy_camera.camera.MODE_CONTINUOUS">
+<code class="descname">MODE_CONTINUOUS</code><em class="property"> = 1</em><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.MODE_CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.cameras.dummy_camera.camera.MODE_SINGLE_SHOT">
+<code class="descname">MODE_SINGLE_SHOT</code><em class="property"> = 0</em><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.MODE_SINGLE_SHOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.acquisitionReady">
+<code class="descname">acquisitionReady</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.acquisitionReady"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.acquisitionReady" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the acquisition in the camera is over.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.getAcquisitionMode">
+<code class="descname">getAcquisitionMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.getAcquisitionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.getAcquisitionMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the acquisition mode, either continuous or single shot.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.getExposure">
+<code class="descname">getExposure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.getExposure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.getExposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the exposure time of the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.getSerialNumber">
+<code class="descname">getSerialNumber</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.getSerialNumber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.getSerialNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the serial number of the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.getSize">
+<code class="descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.getSize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.getSize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns the size in pixels of the image being acquired. This is useful for checking the ROI settings.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.initializeCamera">
+<code class="descname">initializeCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.initializeCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.initializeCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.readCamera">
+<code class="descname">readCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.readCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.readCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the camera</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.setAcquisitionMode">
+<code class="descname">setAcquisitionMode</code><span class="sig-paren">(</span><em>mode</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.setAcquisitionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.setAcquisitionMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the readout mode of the camera: Single or continuous.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">int mode: One of self.MODE_CONTINUOUS, self.MODE_SINGLE_SHOT</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.setBinning">
+<code class="descname">setBinning</code><span class="sig-paren">(</span><em>xbin</em>, <em>ybin</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.setBinning"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.setBinning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the binning of the camera if supported. Has to check if binning in X/Y can be different or not, etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">xbin: binning in x</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body">ybin: binning in y</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.setExposure">
+<code class="descname">setExposure</code><span class="sig-paren">(</span><em>exposure</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.setExposure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.setExposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the exposure of the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.setROI">
+<code class="descname">setROI</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.setROI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.setROI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up the ROI. Not all cameras are 0-indexed, so this is an important
+place to define the proper ROI.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>X</strong> – array type with the coordinates for the ROI X[0], X[1]</li>
+<li><strong>Y</strong> – array type with the coordinates for the ROI Y[0], Y[1]</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.stopAcq">
+<code class="descname">stopAcq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.stopAcq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.stopAcq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the acquisition without closing the connection to the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.stopCamera">
+<code class="descname">stopCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.stopCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.stopCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the acquisition and closes the connection with the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.dummy_camera.camera.triggerCamera">
+<code class="descname">triggerCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/dummy_camera.html#camera.triggerCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.dummy_camera.camera.triggerCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggers the camera.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-pynta.model.cameras.hamamatsu">
+<span id="pynta-model-cameras-hamamatsu-module"></span><h2>pynta.model.cameras.hamamatsu module<a class="headerlink" href="#module-pynta.model.cameras.hamamatsu" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hamamatsu-py">
+<h3>hamamatsu.py<a class="headerlink" href="#hamamatsu-py" title="Permalink to this headline">¶</a></h3>
+<p>Model class for controlling Hamamatsu cameras via de DCAM-API. At the time of writing this class,
+little documentation on the DCAM-API was available. Hamamatsu has a different time schedule regarding support of
+their own API. However, Zhuang’s lab Github repository had a python driver for the Orca camera and with a bit of
+tinkering things worked out.</p>
+<p>DCAM-API relies mostly on setting parameters into the camera. The correct data type of each parameter is not well
+documented; however it is possible to print all the available properties and work from there. The properties are
+stored in a filed named params.txt next to the <a class="reference internal" href="pynta.controller.devices.hamamatsu.html#module-pynta.controller.devices.hamamatsu.hamamatsu_camera" title="pynta.controller.devices.hamamatsu.hamamatsu_camera"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Hamamatsu</span> <span class="pre">Driver</span></code></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When setting the ROI, Hamamatsu only allows to set multiples of 4 for every setting (X,Y and vsize,
+hsize). This is checked in the function. Changing the ROI cannot be done directly, one first needs to disable it
+and then re-enable.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">Aquiles Carattino &lt;<a class="reference external" href="mailto:aquiles&#37;&#52;&#48;aquicarattino&#46;com">aquiles<span>&#64;</span>aquicarattino<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">GPLv3, see LICENSE for more details</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pynta.model.cameras.hamamatsu.camera">
+<em class="property">class </em><code class="descclassname">pynta.model.cameras.hamamatsu.</code><code class="descname">camera</code><span class="sig-paren">(</span><em>camera</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pynta.model.cameras.skeleton.cameraBase" title="pynta.model.cameras.skeleton.cameraBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pynta.model.cameras.skeleton.cameraBase</span></code></a></p>
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.GetCCDHeight">
+<code class="descname">GetCCDHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.GetCCDHeight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.GetCCDHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns
+The CCD height in pixels</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.GetCCDWidth">
+<code class="descname">GetCCDWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.GetCCDWidth"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.GetCCDWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns
+The CCD width in pixels</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.cameras.hamamatsu.camera.MODE_CONTINUOUS">
+<code class="descname">MODE_CONTINUOUS</code><em class="property"> = 1</em><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.MODE_CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.cameras.hamamatsu.camera.MODE_EXTERNAL">
+<code class="descname">MODE_EXTERNAL</code><em class="property"> = 2</em><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.MODE_EXTERNAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.cameras.hamamatsu.camera.MODE_SINGLE_SHOT">
+<code class="descname">MODE_SINGLE_SHOT</code><em class="property"> = 0</em><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.MODE_SINGLE_SHOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.acquisitionReady">
+<code class="descname">acquisitionReady</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.acquisitionReady"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.acquisitionReady" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the acquisition in the camera is over.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.getAcquisitionMode">
+<code class="descname">getAcquisitionMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.getAcquisitionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.getAcquisitionMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the acquisition mode, either continuous or single shot.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.getExposure">
+<code class="descname">getExposure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.getExposure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.getExposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the exposure time of the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.getSerialNumber">
+<code class="descname">getSerialNumber</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.getSerialNumber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.getSerialNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the serial number of the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.getSize">
+<code class="descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.getSize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.getSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size in pixels of the image being acquired. This is useful for checking the ROI settings.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.initializeCamera">
+<code class="descname">initializeCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.initializeCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.initializeCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the camera.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.readCamera">
+<code class="descname">readCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.readCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.readCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the camera</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.setAcquisitionMode">
+<code class="descname">setAcquisitionMode</code><span class="sig-paren">(</span><em>mode</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.setAcquisitionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.setAcquisitionMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the readout mode of the camera: Single or continuous.
+Parameters
+mode : int
+One of self.MODE_CONTINUOUS, self.MODE_SINGLE_SHOT</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.setExposure">
+<code class="descname">setExposure</code><span class="sig-paren">(</span><em>exposure</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.setExposure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.setExposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the exposure of the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.setROI">
+<code class="descname">setROI</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.setROI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.setROI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up the ROI. Not all cameras are 0-indexed, so this is an important
+place to define the proper ROI.
+X – array type with the coordinates for the ROI X[0], X[1]
+Y – array type with the coordinates for the ROI Y[0], Y[1]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.stopAcq">
+<code class="descname">stopAcq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.stopAcq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.stopAcq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the acquisition without closing the connection to the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.stopCamera">
+<code class="descname">stopCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.stopCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.stopCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the acquisition and closes the connection with the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.hamamatsu.camera.triggerCamera">
+<code class="descname">triggerCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/hamamatsu.html#camera.triggerCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.hamamatsu.camera.triggerCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggers the camera.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-pynta.model.cameras.psi">
+<span id="pynta-model-cameras-psi-module"></span><h2>pynta.model.cameras.psi module<a class="headerlink" href="#module-pynta.model.cameras.psi" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="psi-py">
+<h3>psi.py<a class="headerlink" href="#psi-py" title="Permalink to this headline">¶</a></h3>
+<p>Model for Photonic Science GEV Cameras. The model just implements the basic methods defined in the
+<a class="reference internal" href="#pynta.model.cameras.skeleton.cameraBase" title="pynta.model.cameras.skeleton.cameraBase"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cameraBase()</span></code></a> using a Photonic Sicence camera. The controller for this
+camera is <a class="reference internal" href="pynta.controller.devices.photonicscience.html#module-pynta.controller.devices.photonicscience" title="pynta.controller.devices.photonicscience"><code class="xref py py-mod docutils literal notranslate"><span class="pre">photonicscience</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">Aquiles Carattino &lt;<a class="reference external" href="mailto:aquiles&#37;&#52;&#48;aquicarattino&#46;com">aquiles<span>&#64;</span>aquicarattino<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">GPLv3, see LICENSE for more details</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pynta.model.cameras.psi.camera">
+<em class="property">class </em><code class="descclassname">pynta.model.cameras.psi.</code><code class="descname">camera</code><span class="sig-paren">(</span><em>camera</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pynta.model.cameras.skeleton.cameraBase" title="pynta.model.cameras.skeleton.cameraBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pynta.model.cameras.skeleton.cameraBase</span></code></a></p>
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.GetCCDHeight">
+<code class="descname">GetCCDHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.GetCCDHeight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.GetCCDHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the CCD height.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.GetCCDWidth">
+<code class="descname">GetCCDWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.GetCCDWidth"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.GetCCDWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the CCD width.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.getParameters">
+<code class="descname">getParameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.getParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.getParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all the parameters passed to the camera, such as exposure time,
+ROI, etc. Not necessarily the parameters go to the hardware, it may be
+that some are just software related.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return dict:</th><td class="field-body">keyword =&gt; value.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-todo admonition" id="index-3">
+<p class="first admonition-title">Todo</p>
+<p class="last">Implement this method</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.getSize">
+<code class="descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.getSize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.getSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size in pixels of the image being acquired.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.initializeCamera">
+<code class="descname">initializeCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.initializeCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.initializeCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the camera.</p>
+<div class="admonition-todo admonition" id="index-4">
+<p class="first admonition-title">Todo</p>
+<p class="last"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UUTrack.Controller.devices.PhotonicScience.scmoscam.GEVSCMOS.SetGainMode()</span></code> behaves unexpectedly.
+One is forced to set the gain mode twice to have it right. So far, this is the only way to prevent the
+<em>weird lines</em> from appearing. Checking the meaning of the gains is a <strong>must</strong>.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.readCamera">
+<code class="descname">readCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.readCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.readCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the camera</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.setExposure">
+<code class="descname">setExposure</code><span class="sig-paren">(</span><em>exposure</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.setExposure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.setExposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the exposure of the camera.</p>
+<div class="admonition-todo admonition" id="index-5">
+<p class="first admonition-title">Todo</p>
+<p class="last">Include units for ensuring the proper exposure time is being set.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.setROI">
+<code class="descname">setROI</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.setROI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.setROI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up the ROI.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.setupCamera">
+<code class="descname">setupCamera</code><span class="sig-paren">(</span><em>params</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.setupCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.setupCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setups the camera with the given parameters.</p>
+<ul class="simple">
+<li>params[‘exposureTime’]</li>
+<li>params[‘binning’]</li>
+<li>params[‘gain’]</li>
+<li>params[‘frequency’]</li>
+<li>params[‘ROI’]</li>
+</ul>
+<div class="admonition-todo admonition" id="index-6">
+<p class="first admonition-title">Todo</p>
+<p class="last">not implemented</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.stopAcq">
+<code class="descname">stopAcq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.stopAcq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.stopAcq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the acquisition even if ongoing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.stopCamera">
+<code class="descname">stopCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.stopCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.stopCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the acquisition and closes the camera. This has to be called before quitting the program.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.psi.camera.triggerCamera">
+<code class="descname">triggerCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/psi.html#camera.triggerCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.psi.camera.triggerCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggers the camera.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-pynta.model.cameras.simulate_brownian">
+<span id="pynta-model-cameras-simulate-brownian-module"></span><h2>pynta.model.cameras.simulate_brownian module<a class="headerlink" href="#module-pynta.model.cameras.simulate_brownian" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="simulate-brownian-py">
+<h3>simulate_brownian.py<a class="headerlink" href="#simulate-brownian-py" title="Permalink to this headline">¶</a></h3>
+<p>The SimulatedBrownian class generates synthetic images corresponding to particles performing a thermal Brownian
+motion to be view, and eventually analyzed, by the rest of the pynta program.</p>
+<div class="admonition-todo admonition" id="index-7">
+<p class="first admonition-title">Todo</p>
+<p class="last">Images could be generated a-priori and stored in memory. This would make it possible to generate higher</p>
+</div>
+<p>framerates and specific sleep times between them.</p>
+<div class="admonition-todo admonition" id="index-8">
+<p class="first admonition-title">Todo</p>
+<p class="last">A lot of parameters are stored as attributes of the class, but they are also used as arguments of methods.</p>
+</div>
+<p>Either replace methods by functions are use the attributes instead of the arguments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">Sanli Faez &lt;<a class="reference external" href="mailto:s&#46;faez&#37;&#52;&#48;uu&#46;com">s<span>&#46;</span>faez<span>&#64;</span>uu<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">GPLv3, see LICENSE for more details</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pynta.model.cameras.simulate_brownian.SimBrownian">
+<em class="property">class </em><code class="descclassname">pynta.model.cameras.simulate_brownian.</code><code class="descname">SimBrownian</code><span class="sig-paren">(</span><em>size=(500</em>, <em>100)</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/simulate_brownian.html#SimBrownian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.simulate_brownian.SimBrownian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>loca</strong> – N x d array of coordinates for N particles in d dimensions, dimension can be intensity or point spread width</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">generated an image with specified noise and particles displaced accordingly</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pynta.model.cameras.simulate_brownian.SimBrownian.genImage">
+<code class="descname">genImage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/simulate_brownian.html#SimBrownian.genImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.simulate_brownian.SimBrownian.genImage" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">generated image with specified noise and particles position in self.loca</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.simulate_brownian.SimBrownian.initLocations">
+<code class="descname">initLocations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/simulate_brownian.html#SimBrownian.initLocations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.simulate_brownian.SimBrownian.initLocations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.simulate_brownian.SimBrownian.nextRandomStep">
+<code class="descname">nextRandomStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/simulate_brownian.html#SimBrownian.nextRandomStep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.simulate_brownian.SimBrownian.nextRandomStep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.simulate_brownian.SimBrownian.resizeView">
+<code class="descname">resizeView</code><span class="sig-paren">(</span><em>size</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/simulate_brownian.html#SimBrownian.resizeView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.simulate_brownian.SimBrownian.resizeView" title="Permalink to this definition">¶</a></dt>
+<dd><p>SimulateBrownian.resizeView() adjusts the coordinates of the moving particles such that they
+fit into the desired framesize of the simulated dummycamera</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-pynta.model.cameras.skeleton">
+<span id="pynta-model-cameras-skeleton-module"></span><h2>pynta.model.cameras.skeleton module<a class="headerlink" href="#module-pynta.model.cameras.skeleton" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="skeleton-py">
+<h3>skeleton.py<a class="headerlink" href="#skeleton-py" title="Permalink to this headline">¶</a></h3>
+<p>Camera class with the skeleton functions. Important to keep track of the methods that are
+exposed to the View. The class cameraBase should be subclassed when developing new Models. This ensures that all the methods are automatically inherited and there is no breaks downstream.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>IMPORTANT</strong> Whatever new function is implemented in a specific model, it should be first declared in the cameraBase class. In this way the other models will have access to the method and the program will keep running (perhaps with non intended behavior though).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">Aquiles Carattino &lt;<a class="reference external" href="mailto:aquiles&#37;&#52;&#48;aquicarattino&#46;com">aquiles<span>&#64;</span>aquicarattino<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body">GPLv3, see LICENSE for more details</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="pynta.model.cameras.skeleton.cameraBase">
+<em class="property">class </em><code class="descclassname">pynta.model.cameras.skeleton.</code><code class="descname">cameraBase</code><span class="sig-paren">(</span><em>camera</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.GetCCDHeight">
+<code class="descname">GetCCDHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.GetCCDHeight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.GetCCDHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns: the CCD height in pixels</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.GetCCDWidth">
+<code class="descname">GetCCDWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.GetCCDWidth"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.GetCCDWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the CCD width in pixels</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.cameras.skeleton.cameraBase.MODE_CONTINUOUS">
+<code class="descname">MODE_CONTINUOUS</code><em class="property"> = 1</em><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.MODE_CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pynta.model.cameras.skeleton.cameraBase.MODE_SINGLE_SHOT">
+<code class="descname">MODE_SINGLE_SHOT</code><em class="property"> = 0</em><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.MODE_SINGLE_SHOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.acquisitionReady">
+<code class="descname">acquisitionReady</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.acquisitionReady"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.acquisitionReady" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the acquisition in the camera is over.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.clearROI">
+<code class="descname">clearROI</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.clearROI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.clearROI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the ROI from the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.configure">
+<code class="descname">configure</code><span class="sig-paren">(</span><em>properties</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.configure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.configure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.getAcquisitionMode">
+<code class="descname">getAcquisitionMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.getAcquisitionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.getAcquisitionMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the acquisition mode, either continuous or single shot.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.getExposure">
+<code class="descname">getExposure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.getExposure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.getExposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the exposure time of the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.getSerialNumber">
+<code class="descname">getSerialNumber</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.getSerialNumber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.getSerialNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the serial number of the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.getSize">
+<code class="descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.getSize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.getSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size in pixels of the image being acquired. This is useful for checking the ROI settings.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.initializeCamera">
+<code class="descname">initializeCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.initializeCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.initializeCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.readCamera">
+<code class="descname">readCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.readCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.readCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the camera</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.setAcquisitionMode">
+<code class="descname">setAcquisitionMode</code><span class="sig-paren">(</span><em>mode</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.setAcquisitionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.setAcquisitionMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the readout mode of the camera: Single or continuous.
+:param int mode: One of self.MODE_CONTINUOUS, self.MODE_SINGLE_SHOT
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.setBinning">
+<code class="descname">setBinning</code><span class="sig-paren">(</span><em>xbin</em>, <em>ybin</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.setBinning"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.setBinning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the binning of the camera if supported. Has to check if binning in X/Y can be different or not, etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>xbin</strong> – </li>
+<li><strong>ybin</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.setExposure">
+<code class="descname">setExposure</code><span class="sig-paren">(</span><em>exposure</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.setExposure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.setExposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the exposure of the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.setROI">
+<code class="descname">setROI</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.setROI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.setROI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up the ROI. Not all cameras are 0-indexed, so this is an important
+place to define the proper ROI.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>X</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – array type with the coordinates for the ROI X[0], X[1]</li>
+<li><strong>Y</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – array type with the coordinates for the ROI Y[0], Y[1]</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">X, Y lists with the current ROI information</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.stopAcq">
+<code class="descname">stopAcq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.stopAcq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.stopAcq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the acquisition without closing the connection to the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.stopCamera">
+<code class="descname">stopCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.stopCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.stopCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the acquisition and closes the connection with the camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pynta.model.cameras.skeleton.cameraBase.triggerCamera">
+<code class="descname">triggerCamera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pynta/model/cameras/skeleton.html#cameraBase.triggerCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pynta.model.cameras.skeleton.cameraBase.triggerCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggers the camera.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-pynta.model.cameras">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pynta.model.cameras" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pynta.model.daqs.html" class="btn btn-neutral float-right" title="pynta.model.daqs package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pynta.model.html" class="btn btn-neutral" title="pynta.model package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Aquiles Carattino
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

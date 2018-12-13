@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting Started &mdash; pynta 0.1.0.rc1 documentation</title>
+  <title>Getting Started &mdash; PyNTA 0.1 documentation</title>
   
 
   
@@ -27,7 +27,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to Contribute Code" href="contribute_codebase.html" />
+    <link rel="prev" title="The Config File" href="example_config.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -46,7 +48,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> pynta
+            <a href="index.html" class="icon icon-home"> PyNTA
           
 
           
@@ -54,10 +56,6 @@
 
           
             
-            
-              <div class="version">
-                0.1.0.rc1
-              </div>
             
           
 
@@ -81,9 +79,19 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installing.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_config.html">The Config File</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#opening-the-program">Opening the Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-tools">The Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tracking-and-linking">Tracking and Linking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute_codebase.html">How to Contribute Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="making_virtual_environment.html">Setting up a Python Virtual Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers/index.html">Information for Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list_todo.html">List of Todo’s</a></li>
 </ul>
 
             
@@ -98,7 +106,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pynta</a>
+          <a href="index.html">PyNTA</a>
         
       </nav>
 
@@ -156,15 +164,19 @@ example config available on the repository is already configured to work with a 
 you copy the contents of the file into a folder on your own computer.</p>
 <div class="section" id="opening-the-program">
 <h2>Opening the Program<a class="headerlink" href="#opening-the-program" title="Permalink to this headline">¶</a></h2>
-<p>After <a href="#id2"><span class="problematic" id="id3">installing_</span></a> PyNTA, you can trigger it from the command line. We are assuming that you are within the folder that
-contains the configuration file and that its name is <code class="docutils literal notranslate"><span class="pre">config.yml</span></code>. To start the program, you simply type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pynta -c config.yml
+<p>After <a class="reference internal" href="installing.html#installing"><span class="std std-ref">Installing</span></a> PyNTA, you can trigger it from the command line. You can simply run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pynta
 </pre></div>
 </div>
 <p>After a few moments, a screen like the one below will welcome you to the program.</p>
 <div class="figure">
-<a class="reference internal image-reference" href="_images/screenshot_01.png"><img alt="screenshot" src="_images/screenshot_01.png" style="width: 1585.55px; height: 937.65px;" /></a>
+<img alt="screenshot" src="_images/screenshot_01.png" />
 </div>
+<p>This will use synthetic data by default, i.e. you can snap or acquire a movie and test the capabilities of the program without the need of connecting with a real camera. Once you are confident with the program and you would like to start using real hardware, you need to develop <a class="reference internal" href="example_config.html#example-config"><span class="std std-ref">a proper config file</span></a>. Once you have it, you can run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pynta -c config.yml
+</pre></div>
+</div>
+<p>You can reproduce the config file that gives you the synthetic data and then move to real devices.</p>
 </div>
 <div class="section" id="the-tools">
 <h2>The Tools<a class="headerlink" href="#the-tools" title="Permalink to this headline">¶</a></h2>
@@ -206,12 +218,21 @@ the button called <code class="docutils literal notranslate"><span class="pre">s
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="contribute_codebase.html" class="btn btn-neutral float-right" title="How to Contribute Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="example_config.html" class="btn btn-neutral" title="The Config File" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2018, PyNTA Contributors
+        &copy; Copyright 2018, Aquiles Carattino
 
     </p>
   </div>
